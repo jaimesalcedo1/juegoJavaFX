@@ -162,8 +162,7 @@ public class GameController {
             System.out.println("colisión");
         }
     }
+    private void shootBullet(){
 
-   // private void shootBullet(){
-
-    //}
+    }
 }
