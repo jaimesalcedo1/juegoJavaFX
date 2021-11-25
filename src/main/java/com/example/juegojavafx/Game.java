@@ -1,6 +1,7 @@
 package com.example.juegojavafx;
 
 import javafx.geometry.Pos;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
@@ -31,6 +32,8 @@ public class Game extends BorderPane {
         //Inicializar
         Image hWall = new Image("stone2.jpg");
         Image vWall = new Image("stone1.jpg");
+        Image imageTank = new Image("tankUp.png");
+        track.setMinSize(0,0);
         track.setStyle("-fx-background-image: url(grass.png);");
         leftWall.setFill(new ImagePattern(vWall));
         leftWall.heightProperty().bind(track.heightProperty());
@@ -46,7 +49,6 @@ public class Game extends BorderPane {
         bottomWall.setFill(new ImagePattern(hWall));
         tank.heightProperty().bind(track.heightProperty().divide(20));
         tank.widthProperty().bind(track.widthProperty().divide(20));
-        Image imageTank = new Image("tankUp.png");
         tank.setFill(new ImagePattern(imageTank));
 
         //Colocar
